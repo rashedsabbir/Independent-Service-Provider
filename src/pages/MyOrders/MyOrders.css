@@ -1,0 +1,52 @@
+.myOrder_banner{
+    background: url(../../img/myOrder-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+    position: relative;
+}
+.myOrder_banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+}
+.myOrder_section{
+    padding: 150px 0 100px;
+}
+.booking_img img{
+    height: 100%;
+}
+.card-body{
+    padding: 12px;
+}
+.card-body .card_title{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark-blue);
+}
+
+/* ------media query ----------------- */
+/* ----large device------------ */
+@media (min-width:991px) and (max-width:1200px){
+    .card-body .card_title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+/* ---- ipad device ---------- */
+@media (min-width:768px) and (max-width:991px){
+    .card-body .card_title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+/* ---- tablet device ---------- */
+@media (max-width:768px){ 
+    .booking_img img{
+        width: 100%;
+    }
+}

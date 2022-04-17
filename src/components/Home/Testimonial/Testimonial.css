@@ -1,0 +1,49 @@
+.testimonial_section{
+    padding: 100px 0;
+}
+.testi_img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.testi_content{
+    text-align: center;
+}
+.testi_content .feedback {
+    height: 180px;
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color);
+    max-width: 380px;
+    line-height: 28px;
+    margin: 0 auto;
+}
+.testi_content .name{
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+/* .testi_content .traveler{
+
+} */
+
+/* ------media query ----------------- */
+
+/* ----large device------------ */
+@media (min-width:991px) and (max-width:1200px){
+    .testi_content .feedback {
+        height: 280px;
+    }
+}
+/* ---- ipad device ---------- */
+@media (min-width:768px) and (max-width:991px){
+    .testi_content .feedback {
+        height: 250px;
+    }
+}
+/* ---- mobile device ---------- */
+@media (max-width:576px){
+    .testi_content .feedback {
+        height: auto;
+    }
+}

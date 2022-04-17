@@ -1,0 +1,49 @@
+.register_banner{
+    background: url(../../img/sign-up-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25vh;
+    position: relative;
+}
+.register_banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.register_section{
+    padding: 150px 0 100px;
+}
+.login_form h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: var(--dark-blue);
+}
+.login_link{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ------media query ----------------- */
+
+/* ---- mobile device ---------- */
+@media (max-width:768px){
+    .register_wrapper{
+        flex-direction: column-reverse;
+    }
+    .register_img {
+        padding-top: 50px;
+    }
+}
+/* ----small mobile device ---------- */
+@media (max-width:375px){
+    .other_login .login {
+        margin: 0 8px;
+        width: 30px;
+        height: 30px;
+    }
+}

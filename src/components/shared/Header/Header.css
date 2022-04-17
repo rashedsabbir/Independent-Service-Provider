@@ -1,0 +1,61 @@
+.navBar_container{
+    padding: 12px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    transition: 0.3s;
+}
+.sticky_nav{
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transition: 0.3s;
+    background: white;
+}
+.navbar-nav{
+    align-items: center;
+}
+.nav_menu a{
+    display: inline-block;
+    margin: 0 15px;
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav_menu a:hover{
+    color: var(--yellow-color);
+}
+.sticky_nav .nav_menu a{
+    color: var(--dark-blue);
+}
+
+/* ---------media query--------- */
+/* ----large device------------ */
+@media (min-width:991px) and (max-width:1200px){
+    .nav_menu a {
+        margin: 0 8px;
+        font-size: 16px;
+    }
+}
+/* ------responsive navbar-------- */
+@media (max-width:991px){
+    #responsive-navbar-nav {
+        background: white;
+        padding: 50px 22px;
+    }
+    .navbar-nav {
+        align-items: start;
+    }
+    .nav_menu a {
+        margin: 0px 0 15px;
+        color: var(--dark-blue);
+    }
+    .navbar-dark .navbar-toggler-icon {
+        background-image: url(../../../img/manu_bar.svg) !important;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+}

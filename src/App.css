@@ -1,0 +1,59 @@
+/* ---google fonts------ */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Nothing+You+Could+Do&family=Roboto:wght@400;500;700&display=swap');
+
+/* ---root------ */
+:root{
+  --yellow-color:#FF4A52;
+  --primary-color:#00D690;
+  --dark-blue:#00095E;
+  --paragraph-color:#677f8b;
+  --title-font:'Nothing You Could Do', cursive;
+  --paragraph-font:'Roboto', sans-serif;
+  --white-color:#fff;
+}
+
+/* ---global css start------- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Josefin Sans', sans-serif !important;
+  overflow-x: hidden;
+}
+img{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+a{
+  text-decoration: none !important;
+}
+.regular_btn,
+.btn_dark{
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: var(--yellow-color);
+  transition: 0.3s ease;
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+.regular_btn:hover{
+  background: var(--dark-blue);
+}
+.btn_dark{
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.btn_dark:hover{
+  background: transparent;
+  border: 2px solid var(--white-color);
+  color: var(--white-color);
+}
+/* ---global css end------- */

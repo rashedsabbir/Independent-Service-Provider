@@ -1,0 +1,10 @@
+.notFound_bg{
+    background: var(--dark-blue);
+    height: 90px;
+}
+.notFound_img{
+    padding: 80px 0;
+}
+.notFound_img img{
+    height: 500px;
+}

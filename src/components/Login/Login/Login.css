@@ -1,0 +1,102 @@
+.login_bg{
+    background: url(../../../img/loginBanner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25vh;
+    position: relative;
+}
+.login_bg::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+.login_section{
+    padding: 100px 0;
+}
+.login_form h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: var(--dark-blue);
+}
+.register{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.login_form form input{
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 0px;
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 10px 25px;
+}
+.login_form form input[type="submit"]{
+    border: none;
+    border-radius: 5px;
+}
+.login_form form span{
+    position: relative;
+    display: block;
+}
+.login_form form span .icon{
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+}
+.form-check-input[type=checkbox] {
+    padding: 5px;
+    border: 1px solid #BFBFBF;
+}
+.forgot_text{
+    color: #0d6efd;
+    cursor: pointer;
+    border-bottom: 1px solid #0d6efd;
+    display: inline-block;
+}
+
+.other_login .login{
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.other_login .google_login{
+    background: #DA1D2E;
+}
+.other_login .fb_login{
+    background: #3A5B97;
+}
+.other_login .github_login{
+    background: #000;
+}
+.other_login .login .login_icon{
+    color: white;
+}
+
+/* ------media query ----------------- */
+
+/* ---- mobile device ---------- */
+@media (max-width:768px){
+    .login_wrapper{
+        flex-direction: column-reverse;
+    }
+}
+/* ----small mobile device ---------- */
+@media (max-width:375px){
+    .form-check label {
+        font-size: 14px;
+    }
+    .forgot_text {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,89 @@
+.heroBanner_section{
+    background: url(../../../img/travel_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heroBanner_section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.heroBanner_section .container{
+    position: relative;
+    z-index: 2;
+}
+.hero_content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero_content h2 {
+    font-size: 60px;
+    color: var(--white-color);
+    font-weight: 700;
+}
+.hero_content p{
+    font-size: 18px;
+    font-weight: 400;
+    margin: 15px 0 20px;
+    color: var(--white-color);
+    font-family: var(--paragraph-font) ;
+}
+
+/* ------media query ----------------- */
+
+/* ---- tablet  device ---------- */
+@media (min-width:576px) and (max-width:768px){
+    .hero_content h2 {
+        font-size: 46px;
+        line-height: 65px;
+    }
+}
+/* ---- mobile device ---------- */
+@media (min-width:375px) and (max-width:576px){
+    .hero_content {
+        padding-top: 100px;
+    }
+    .hero_content p {
+        font-size: 16px;
+        font-weight: 500;
+        max-width: 300px;
+        margin: 0 auto 20px;
+        line-height: 28px;
+    }
+    
+}
+@media (min-width:375px) and (max-width:470px){
+    .hero_content h2 {
+        font-size: 52px;
+    }
+}
+/* ----small mobile device ---------- */
+@media (min-width:330px) and (max-width:375px){
+    .hero_content h2 {
+        font-size: 30px;
+    }
+}
+@media (max-width:330px){
+    .hero_content {
+        padding-top: 130px;
+    }
+    .hero_content h2 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .hero_content p {
+        line-height: 30px;
+    }
+}
