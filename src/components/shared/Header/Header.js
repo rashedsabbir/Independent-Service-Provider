@@ -8,19 +8,19 @@ import './Header.css';
 
 const Header = () => {
    // use auth
-   const { user,logout } = useAuth();
+   const { user, logout } = useAuth();
    // set sticky
-   const [sticky,setSticky] = useState(false);
+   const [sticky, setSticky] = useState(false);
    // sticky condition
    const handleSticky = () => {
-      if(window.scrollY > 50){
+      if (window.scrollY > 50) {
          setSticky(true)
       }
-      else{
+      else {
          setSticky(false)
       }
    }
-   window.addEventListener('scroll',handleSticky)
+   window.addEventListener('scroll', handleSticky)
    return (
       <>
          <div className={sticky ? `sticky_nav navBar_container` : 'navBar_container'}>
@@ -32,18 +32,18 @@ const Header = () => {
                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                   <Navbar.Collapse id="responsive-navbar-nav">
                      <Nav className="ms-auto nav_menu">
-                        <NavLink activeStyle={{borderBottom:'1px solid #FF4A52'}} to="/home">Home</NavLink>
-                        <NavLink activeStyle={{borderBottom:'1px solid #FF4A52'}} to="/about">About</NavLink>
-                        {user.email && 
-                        <NavLink activeStyle={{borderBottom:'1px solid #FF4A52'}} to="/myOrder">My Orders</NavLink>}
-                        {user.email && 
-                        <NavLink activeStyle={{borderBottom:'1px solid #FF4A52'}} to="/manageAllOrders">All Orders</NavLink>}
-                        {user.email && 
-                        <NavLink activeStyle={{borderBottom:'1px solid #FF4A52'}} to="/addDestination">
-                         Add Destination</NavLink>}
-                        <NavLink activeStyle={{borderBottom:'1px solid #FF4A52'}} to="/contact">Contact</NavLink>
+                        <NavLink activeStyle={{ borderBottom: '1px solid #FF4A52' }} to="/home">Home</NavLink>
+                        <NavLink activeStyle={{ borderBottom: '1px solid #FF4A52' }} to="/about">About</NavLink>
+                        {user.email &&
+                           <NavLink activeStyle={{ borderBottom: '1px solid #FF4A52' }} to="/myOrder">My Orders</NavLink>}
+                        {user.email &&
+                           <NavLink activeStyle={{ borderBottom: '1px solid #FF4A52' }} to="/manageAllOrders">All Orders</NavLink>}
+                        {user.email &&
+                           <NavLink activeStyle={{ borderBottom: '1px solid #FF4A52' }} to="/addDestination">
+                              Add Destination</NavLink>}
+                        <NavLink activeStyle={{ borderBottom: '1px solid #FF4A52' }} to="/contact">Blogs</NavLink>
                         {user.email ? <div>
-                           <strong style={{color:'#00D690'}}>Hi! {user?.displayName} </strong>
+                           <strong style={{ color: '#00D690' }}>Hi! {user?.displayName} </strong>
                            <button onClick={logout} className="regular_btn">Logout</button>
                         </div> :
                            <div className="login-btn">

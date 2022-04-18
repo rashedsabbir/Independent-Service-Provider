@@ -1,4 +1,4 @@
-.about_banner{
+.about_banner {
     background: url(../../img/about-banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -8,7 +8,8 @@
     justify-content: center;
     position: relative;
 }
-.about_banner::before{
+
+.about_banner::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -17,29 +18,34 @@
     top: 0;
     left: 0;
 }
-.about_banner h2{
+
+.about_banner h2 {
     font-size: 28px;
     color: white;
     margin-top: 25px;
     position: relative;
     z-index: 2;
 }
-.aboutUs_section{
+
+.aboutUs_section {
     padding: 100px 0;
 }
-.about_content strong{
+
+.about_content strong {
     font-size: 18px;
     margin-bottom: 20px;
     color: var(--yellow-color);
     display: inline-block;
 }
+
 .about_content h2 {
     font-size: 48px;
     font-weight: 600;
     max-width: 450px;
     color: var(--dark-blue);
 }
-.about_content p{
+
+.about_content p {
     font-size: 18px;
     font-family: var(--paragraph-font);
     line-height: 28px;
@@ -47,30 +53,39 @@
     color: var(--paragraph-color);
 }
 
+.about_img {
+    width: 50%;
+    margin-left: 150px;
+}
+
 /* ------media query ----------------- */
 /* ---- mobile device ---------- */
-@media (max-width:768px){
-    .about_wrapper{
+@media (max-width:768px) {
+    .about_wrapper {
         flex-direction: column-reverse;
     }
+
     .about_banner h2 {
         margin-top: 55px;
     }
+
     .about_img {
         padding-top: 50px;
     }
 }
 
 /* ----small mobile device ---------- */
-@media (min-width:375px) and (max-width:576px){
+@media (min-width:375px) and (max-width:576px) {
     .about_content h2 {
         font-size: 42px;
     }
 }
-@media (max-width:375px){ 
+
+@media (max-width:375px) {
     .about_content h2 {
         font-size: 28px;
     }
+
     .about_content p {
         font-size: 16px;
     }

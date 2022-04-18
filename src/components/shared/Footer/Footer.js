@@ -19,9 +19,9 @@ const Footer = () => {
                            </div>
                            <p className="footer_about_text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                            <div className="social_links d-flex">
-                              <div><FontAwesomeIcon className="icon" icon={faFacebookF}/></div>
-                              <div><FontAwesomeIcon className="icon" icon={faTwitter}/></div>
-                              <div><FontAwesomeIcon className="icon" icon={faLinkedinIn}/></div>
+                              <div><FontAwesomeIcon className="icon" icon={faFacebookF} /></div>
+                              <div><FontAwesomeIcon className="icon" icon={faTwitter} /></div>
+                              <div><FontAwesomeIcon className="icon" icon={faLinkedinIn} /></div>
                            </div>
                         </div>
                      </div>
@@ -33,7 +33,7 @@ const Footer = () => {
                            <p><Link to="/">Home</Link></p>
                            <p><Link to="/">About</Link></p>
                            <p><Link to="/">Blog</Link></p>
-                           <p><Link to="/">Contact</Link></p>
+                           <p><Link to="/Login">Contact</Link></p>
                         </div>
                      </div>
                      <div className="col-lg-3 col-sm-6 text-white mb-4">
