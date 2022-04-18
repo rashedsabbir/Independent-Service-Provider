@@ -3,7 +3,7 @@
 Website Link ➡ [Live Link](https://assignment-10-8dff4.web.app)
 
 ### Short Description
-Sherpa provided the best tourism places, I offered beautiful tourism places for lowest prices, I can take your Comfortable Journey as a Travel Guide. so let's start your journey with me.
+Sherpa provides the best tourism places, I offered beautiful tourism places for lowest prices, I can take your Comfortable Journey as a Travel Guide. so let's start your journey with me.
 
 
 - This is Tour guide website.
