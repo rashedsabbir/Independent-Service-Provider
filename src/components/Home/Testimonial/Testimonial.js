@@ -9,21 +9,21 @@ const Testimonial = () => {
       {
          id: 1,
          img: testimonialImg_1,
-         feedBack: " Everything was perfect, and I would have to say it was the vacation of a life time (...) I will do all I can to promote your company and your services. (...) Thank you so very much for having arranged the magnificent trip we took!! ",
+         feedBack: " Everything was perfect and I would have to say it was the vacation of a life time. I will do all I can to promote your services. Thank you so very much for having arranged the magnificent trip we took!! ",
          name: 'Amy Johnson',
          identity: 'Traveler'
       },
       {
          id: 2,
          img: testimonialImg_2,
-         feedBack: " If I were speaking to someone about Travelo tour, I would stress that you are a travel company, with accommodation and dining near the top of your priorities. I myself have usually traveled in a little less style. At the same time, it was not so expensive and I thoroughly enjoyed the comforts. Thanks! ",
+         feedBack: " If I were speaking to someone about Sherpa, I would stress that you are a travel company, with accommodation and dining near the top of your priorities. I myself have usually traveled in a little less style.",
          name: 'Mike Hardson',
          identity: 'Traveler'
       },
       {
          id: 3,
          img: testimonialImg_1,
-         feedBack: "Absolutely! Will use you again. You were recommended to us by a couple friends of mine. I'm glad they had such a good experience with you. I also want to personally thank you for being so flexible when Brenda and I had to cancel our first trip with you due to a skiing accident she had.",
+         feedBack: "Absolutely! Will use you again. You were recommended to us by a couple friends of mine. I'm glad they had such a good experience with you. I also want to personally thank you for being so flexible.",
          name: 'Luaka Smith',
          identity: 'Traveler'
       },

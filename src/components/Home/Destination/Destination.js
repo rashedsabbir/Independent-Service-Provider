@@ -9,26 +9,26 @@ const Destination = () => {
    // destinations state
    const [destinations, setDestinations] = useState([]);
    // loading state
-   const [isLoading,setIsLoading] = useState(true);
+   const [isLoading, setIsLoading] = useState(true);
    // load data
    useEffect(() => {
       fetch('https://thawing-bayou-70947.herokuapp.com/destinations')
          .then(res => res.json())
          .then(data => {
             setDestinations(data);
-               setIsLoading(false)
+            setIsLoading(false)
          })
    }, [])
    // loading condition
-   if(isLoading){
-     return <div className="text-center my-5"><Spinner animation="border" /></div>
+   if (isLoading) {
+      return <div className="text-center my-5"><Spinner animation="border" /></div>
    }
    return (
       <>
          <div className="destination_section">
             <div className="container">
                <div className="sec_title" data-aos="fade-up">
-                  <h2>Our Destinations</h2>
+                  <h2>Services</h2>
                </div>
                <div className="row mt-5">
                   {
@@ -57,7 +57,7 @@ const Destination = () => {
                   }
                </div>
                <div className="text-center mt-5" data-aos="fade-up">
-                  <button className="regular_btn">Coming More Destinations</button>
+                  <button className="regular_btn">Coming More Services</button>
                </div>
             </div>
          </div>
