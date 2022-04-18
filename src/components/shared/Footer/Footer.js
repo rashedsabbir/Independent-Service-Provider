@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../../../img/white-logo.webp';
+import logo from '../../../img/logo.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -31,9 +31,9 @@ const Footer = () => {
                               <h4>Navigation</h4>
                            </div>
                            <p><Link to="/">Home</Link></p>
-                           <p><Link to="/">About</Link></p>
-                           <p><Link to="/">Blog</Link></p>
-                           <p><Link to="/Login">Contact</Link></p>
+                           <p><Link to="/AboutUs">About</Link></p>
+                           <p><Link to="/Contact">Blog</Link></p>
+                           <p><Link to="/Login">Log In</Link></p>
                         </div>
                      </div>
                      <div className="col-lg-3 col-sm-6 text-white mb-4">
@@ -50,7 +50,8 @@ const Footer = () => {
                      </div>
                      <div className="col-lg-3 col-sm-6 text-white mb-4">
                         <div className="footer_logo mb-4">
-                           <img src={logo} alt="" />
+                           <img src={logo} alt="" /><hr />
+                           <p>Sherpa</p>
                         </div>
                         <p className="address">5th flora, 700/D kings road, green
                            lane New York-1782</p>
