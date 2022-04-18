@@ -15,13 +15,13 @@ Sherpa provided the best tourism places, I offered beautiful tourism places for 
 
 ### Framework and Libraries
 
-*** react js
-*** AOS
-*** firebase authentication
-*** react router
-*** react bootstrap
-*** fontawsome
-*** css
+- react js
+- AOS
+- firebase authentication
+- react router
+- react bootstrap
+- fontawsome
+- css
 
 
 
