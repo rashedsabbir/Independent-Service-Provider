@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import logo from '../../../img/white-logo.webp';
-import blackLogo from '../../../img/travel_logo.webp';
+
 import './Header.css';
 
 const Header = () => {
@@ -27,7 +26,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" variant="dark">
                <Container>
                   <Navbar.Brand href="/home">
-                     {sticky ? <img src={blackLogo} alt="" /> : <img src={logo} alt="" />}
+                     {sticky ? <h2 className='text-danger'>Sherpa</h2> : <h2>Sherpa</h2>}
                   </Navbar.Brand>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                   <Navbar.Collapse id="responsive-navbar-nav">
