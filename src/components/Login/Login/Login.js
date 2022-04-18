@@ -5,7 +5,7 @@ import useAuth from '../../../Hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 
 const Login = () => {
@@ -16,8 +16,7 @@ const Login = () => {
    // redirect uri
    const redirect_uri = location?.state?.from || '/home';
    // use auth
-   const { setEmail, setPassword, signInUsingGoogle, setUser, setError, signInUsingFb,
-   signInUsingGithub,error,loginUsingEmailPassword } = useAuth();
+   const { setEmail, setPassword, signInUsingGoogle, setUser, setError, error, loginUsingEmailPassword } = useAuth();
 
    // handleEmail
    const handleEmail = (e) => {
@@ -32,13 +31,13 @@ const Login = () => {
    const handleSubmit = (e) => {
       e.preventDefault()
       loginUsingEmailPassword()
-      .then(result => {
-         setUser(result.user);
-         history.push(redirect_uri)
-     })
-     .catch(err => {
-         setError(err.message)
-     })
+         .then(result => {
+            setUser(result.user);
+            history.push(redirect_uri)
+         })
+         .catch(err => {
+            setError(err.message)
+         })
    }
 
    // handle Google SignIn
@@ -54,35 +53,35 @@ const Login = () => {
    }
 
    // handle Fb sign In
-   const handleFbSignIn = () => {
-      signInUsingFb()
-         .then(result => {
-            setUser(result.user)
-            history.push(redirect_uri)
-         })
-         .catch(err => {
-            setError(err.message)
-         })
-   }
+   // const handleFbSignIn = () => {
+   //    signInUsingFb()
+   //       .then(result => {
+   //          setUser(result.user)
+   //          history.push(redirect_uri)
+   //       })
+   //       .catch(err => {
+   //          setError(err.message)
+   //       })
+   // }
 
    // handle Github Sign In
-   const handleGithubSignIn = () => {
-      signInUsingGithub()
-      .then(result => {
-         setUser(result.user)
-         history.push(redirect_uri)
-     })
-     .catch(err => {
-         setError(err.message)
-     })
-   }
+   // const handleGithubSignIn = () => {
+   //    signInUsingGithub()
+   //       .then(result => {
+   //          setUser(result.user)
+   //          history.push(redirect_uri)
+   //       })
+   //       .catch(err => {
+   //          setError(err.message)
+   //       })
+   // }
    // set time for error
    setTimeout(() => {
       setError('')
    }, 5000);
    return (
       <>
-      <div className="login_bg"></div>
+         <div className="login_bg"></div>
          <div className="login_section">
             <div className="container">
                <div className="row align-items-center login_wrapper" data-aos="fade-up">
@@ -90,7 +89,7 @@ const Login = () => {
                      <div className="login_img">
                         <img src={loginImg} alt="" />
                      </div>
-                     <Link to="/register"><p className="register">Create An Account</p></Link>
+                     <Link to="/register"><p className="register">Register</p></Link>
                   </div>
                   <div className="col-lg-6 col-md-6">
                      <div className="login_form">
@@ -102,7 +101,7 @@ const Login = () => {
                            </span>
                            <span>
                               <FontAwesomeIcon className="icon" icon={faLock} /> <input type="password"
-                               onChange={handlePassword}  placeholder="Password" />
+                                 onChange={handlePassword} placeholder="Password" />
                            </span>
                            <p id="error" className="text-danger">{error}</p>
                            <div className="row align-items-center my-3">
@@ -123,12 +122,7 @@ const Login = () => {
                            <div onClick={handleGoogleSignIn} className="login google_login">
                               <FontAwesomeIcon className="login_icon" icon={faGoogle} />
                            </div>
-                           <div onClick={handleFbSignIn} className="login fb_login">
-                              <FontAwesomeIcon className="login_icon" icon={faFacebookF} />
-                           </div>
-                           <div onClick={handleGithubSignIn} className="login github_login">
-                              <FontAwesomeIcon className="login_icon" icon={faGithub} />
-                           </div>
+
                         </div>
                      </div>
                   </div>

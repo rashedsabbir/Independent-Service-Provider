@@ -1,4 +1,4 @@
-import { faFacebookF, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,7 +19,7 @@ const Register = () => {
    const redirect_uri = location.state?.from || '/home';
    // use auth
    const { setName, setEmail, setPassword, registerUserUsingEmailPassword, setUser, error,
-   setError,registerUpdateUser,verifyEmail,signInUsingGoogle,signInUsingFb,signInUsingGithub } = useAuth();
+      setError, registerUpdateUser, verifyEmail, signInUsingGoogle } = useAuth();
    // use form 
    // const { register, handleSubmit, reset } = useForm();
 
@@ -58,41 +58,41 @@ const Register = () => {
    // handle Google SignIn
    const handleGoogleSignIn = () => {
       signInUsingGoogle()
-      .then(result => {
-         setUser(result.user)
-         history.push(redirect_uri)
-      })
-      .catch(err => {
-         setError(err.message);
-      })
-   }
-    // handle Fb sign In
-    const handleFbSignIn = () => {
-      signInUsingFb()
          .then(result => {
             setUser(result.user)
             history.push(redirect_uri)
          })
          .catch(err => {
-            setError(err.message)
+            setError(err.message);
          })
    }
+   // handle Fb sign In
+   // const handleFbSignIn = () => {
+   //    signInUsingFb()
+   //       .then(result => {
+   //          setUser(result.user)
+   //          history.push(redirect_uri)
+   //       })
+   //       .catch(err => {
+   //          setError(err.message)
+   //       })
+   // }
 
 
    // handle Github Sign In
-   const handleGithubSignIn = () => {
-      signInUsingGithub()
-      .then(result => {
-         setUser(result.user)
-         history.push(redirect_uri)
-     })
-     .catch(err => {
-         setError(err.message)
-     })
-   }
+   // const handleGithubSignIn = () => {
+   //    signInUsingGithub()
+   //       .then(result => {
+   //          setUser(result.user)
+   //          history.push(redirect_uri)
+   //       })
+   //       .catch(err => {
+   //          setError(err.message)
+   //       })
+   // }
    return (
       <>
-      <div className="register_banner"></div>
+         <div className="register_banner"></div>
          <div className="register_section">
             <div className="container">
                <div className="row align-items-center register_wrapper" data-aos="fade-up">
@@ -109,16 +109,16 @@ const Register = () => {
                         <h2>Register</h2>
                         <form onSubmit={handleRegister}>
                            <span>
-                              <FontAwesomeIcon className="icon" icon={faUser} /> <input type="text" 
-                              onChange={handleName} placeholder="Name" />
+                              <FontAwesomeIcon className="icon" icon={faUser} /> <input type="text"
+                                 onChange={handleName} placeholder="Name" />
                            </span>
                            <span>
-                              <FontAwesomeIcon className="icon" icon={faEnvelope} /> <input type="email" 
-                              onChange={handleEmail} placeholder="Email" />
+                              <FontAwesomeIcon className="icon" icon={faEnvelope} /> <input type="email"
+                                 onChange={handleEmail} placeholder="Email" />
                            </span>
                            <span>
                               <FontAwesomeIcon className="icon" icon={faLock} /> <input type="password"
-                                onChange={handlePassword} placeholder="Password" />
+                                 onChange={handlePassword} placeholder="Password" />
                            </span>
                            <p className="text-danger">{error}</p>
                            <div className="row my-3 align-items-center">
@@ -139,12 +139,7 @@ const Register = () => {
                            <div onClick={handleGoogleSignIn} className="login google_login">
                               <FontAwesomeIcon className="login_icon" icon={faGoogle} />
                            </div>
-                           <div onClick={handleFbSignIn} className="login fb_login">
-                              <FontAwesomeIcon className="login_icon" icon={faFacebookF} />
-                           </div>
-                           <div onClick={handleGithubSignIn} className="login github_login">
-                              <FontAwesomeIcon className="login_icon" icon={faGithub} />
-                           </div>
+
                         </div>
                      </div>
                   </div>

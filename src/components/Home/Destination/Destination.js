@@ -12,7 +12,7 @@ const Destination = () => {
    const [isLoading, setIsLoading] = useState(true);
    // load data
    useEffect(() => {
-      fetch('https://thawing-bayou-70947.herokuapp.com/destinations')
+      fetch(`./destinations.JSON`)
          .then(res => res.json())
          .then(data => {
             setDestinations(data);
